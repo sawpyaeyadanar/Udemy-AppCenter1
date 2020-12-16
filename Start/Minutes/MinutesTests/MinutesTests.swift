@@ -28,7 +28,6 @@ class MinutesTests: XCTestCase {
     func testSerialization() {
         let serializedData = FileEntryStore.serialize(entryUnderTest)
         let entry = FileEntryStore.deserialize(serializedData!)
-        
         XCTAssertEqual(entry?.title, "Title", "Title does not match")
         XCTAssertEqual(entry?.content, "Content", "Content does not match")
     }
